@@ -54,17 +54,17 @@ class SpotifyWrapper(QtGui.QSystemTrayIcon):
     def toggle_spotify_visibility(self):
         if self.spotify_hidden:
             self.show_spotify()
-            self.spotify_hidden = False
         else:
             self.hide_spotify()
-            self.spotify_hidden = True
 
     def hide_spotify(self):
         subprocess.call(xdotool("windowunmap", self.spotify_id))
+        self.spotify_hidden = True
 
     def show_spotify(self):
         subprocess.call(xdotool("windowmap", self.spotify_id))
         subprocess.call(xdotool("windowactivate", self.spotify_id))
+        self.spotify_hidden = False
 
     def play_pause(self):
         subprocess.call(playerctl("play-pause"))
