@@ -21,6 +21,8 @@ Requirements
 Installation
 ------------
 
+__Real installation will be implemented soon, for now you can follow below__
+
 No installation is required. You just need to clone the repository or download the zip file locally
 ```
 git clone git@github.com:Kasama/SpotifyTray.git
@@ -29,10 +31,10 @@ cd SpotifyTray
 
 and run the script with python
 ```
-python3 main.py
+python3 spotify-tray.py
 ```
 
-You can also create a (or change spotify's) `.desktop` file to launch the script
+You can also use the provided `.desktop` file to launch the script. The `.desktop` should be in `/usr/share/applications/` or `~/.local/share/applications` and the python script should be in your `$PATH`
 
 License
 -------

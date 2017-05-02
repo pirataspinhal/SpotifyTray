@@ -128,7 +128,7 @@ def main():
     find_failed = subprocess.call(find_spotify_command)
 
     if find_failed == 1:
-        spotify_process = subprocess.Popen(["spotify"])
+        spotify_process = subprocess.Popen(["spotify"] + sys.argv[1:])
 
     while find_failed == 1:
         find_failed = subprocess.call(find_spotify_command)

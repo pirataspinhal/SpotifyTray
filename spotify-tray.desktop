@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=SpotifyTray
+GenericName=Music Player
+Comment=Spotify streaming music client tray controller
+Icon=spotify-client
+Exec=spotify-tray.py %U
+TryExec=spotify-tray.py
+Terminal=false
+Type=Application
+Categories=Audio;Music;Player;AudioVideo;
+MimeType=x-scheme-handler/spotify;
