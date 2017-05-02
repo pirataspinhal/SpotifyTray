@@ -1,0 +1,3 @@
+[submodule "SpotifyTrayPKGBUILD"]
+	path = SpotifyTrayPKGBUILD
+	url = git@github.com:Kasama/SpotifyTrayPKGBUILD
