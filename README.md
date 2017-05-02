@@ -1,0 +1,41 @@
+Spotify Tray Wrapper
+====================
+
+This project aims to overcome the problem the latest spotify versions introduced, which is that they have removed the tray icon and the possibility to minimize the player to tray on the Linux official client. This has forced many users to use the outdated client, which had this feature.
+
+What this program does:
+
+- Finds a running instance of spotify (or launches a new one).
+- Creates a Tray icon with a menu to control playback (play/pause, next, previous).
+- Adds the possiblity to hide the spotify client (minimize to tray).
+
+Requirements
+------------
+
+- A Linux distribuition (as the problem is not present on Windows/MacOS)
+- Python >= 3 (to run the script)
+	- PyQt4 (to manage tray icon and menu)
+- xdotool (to hide/show spotify)
+- playerctl (to control playback)
+
+Installation
+------------
+
+No installation is required. You just need to clone the repository or download the zip file locally
+```
+git clone git@github.com:Kasama/SpotifyTray.git
+cd SpotifyTray
+```
+
+and run the script with python
+```
+python3 main.py
+```
+
+You can after that, create a (or change spotify's) `.desktop` file to launch the script
+
+License
+-------
+
+This project is distributed under the MIT license, without any guarantees explicit or otherwise.
+The png icon used is the logotype of Spotify Inc. And is not my work in any way.

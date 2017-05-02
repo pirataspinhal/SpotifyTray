@@ -1,9 +1,10 @@
+#! /usr/bin/env python3
+
 import sys
 import ast
 import signal
-from PyQt4 import QtGui, QtCore
-import json
 import subprocess
+from PyQt4 import QtGui, QtCore
 
 def playerctl(command):
     return ["playerctl", "-p", "spotify", command]
@@ -109,19 +110,6 @@ def main():
     spotify = SpotifyWrapper(spotify_id)
     spotify.show()
     sys.exit(spotify.app.exec_())
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 if __name__ == '__main__':
     main()
