@@ -39,7 +39,7 @@ License
 
 This project is distributed under the [MIT license][mit].
 
-The png icon used is the logotype of [Spotify Inc.][spotify] It is not my work in any way and all its rights are reserved.
+Spotify is a trademark of [Spotify Inc.][spotify] It is not my work in any way and all its rights are reserved.
 
 [python]: https://www.python.org/downloads/release/python-361/
 [pyqt]: https://www.riverbankcomputing.com/software/pyqt/download

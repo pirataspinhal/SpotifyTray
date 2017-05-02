@@ -25,7 +25,7 @@ class SpotifyWrapper(QtGui.QSystemTrayIcon, subprocess.Popen):
 
         # TODO: Change to spotify icon
         # icon = QtGui.QIcon(style.standardPixmap(QtGui.QStyle.SP_FileIcon))
-        icon = QtGui.QIcon("./spotify.png")
+        icon = QtGui.QIcon("/usr/share/pixmaps/spotify-client.png")
         QtGui.QSystemTrayIcon.__init__(self, icon, parent)
 
         self.menu = QtGui.QMenu(parent)
@@ -119,7 +119,12 @@ class SpotifyWrapper(QtGui.QSystemTrayIcon, subprocess.Popen):
 
 def main():
     signal.signal(signal.SIGINT, signal.SIG_DFL)
-    find_spotify_command = ["xdotool", "search", "--onlyvisible", "--limit", "1", "--class", "spotify"]
+    find_spotify_command = [
+            "xdotool", "search",
+            "--onlyvisible",
+            "--limit", "1",
+            "--class", "spotify"
+            ]
     find_failed = subprocess.call(find_spotify_command)
 
     if find_failed == 1:
