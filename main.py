@@ -6,22 +6,24 @@ import signal
 import subprocess
 from PyQt4 import QtGui, QtCore
 
+
 def playerctl(command):
     return ["playerctl", "-p", "spotify", command]
+
 
 def xdotool(command, id):
     return ["xdotool", command, str(id)]
 
+
 class SpotifyWrapper(QtGui.QSystemTrayIcon):
-    def __init__(self, spotify_id , parent=None):
+    def __init__(self, spotify_id, parent=None):
         self.app = QtGui.QApplication(sys.argv)
-        style = self.app.style()
         self.spotify_id = spotify_id
         # TODO: Find more reliable way of keeping track of spotify visibility status
         self.spotify_hidden = False
 
         # TODO: Change to spotify icon
-        #icon = QtGui.QIcon(style.standardPixmap(QtGui.QStyle.SP_FileIcon))
+        # icon = QtGui.QIcon(style.standardPixmap(QtGui.QStyle.SP_FileIcon))
         icon = QtGui.QIcon("./spotify.png")
         QtGui.QSystemTrayIcon.__init__(self, icon, parent)
 
@@ -92,8 +94,9 @@ class SpotifyWrapper(QtGui.QSystemTrayIcon):
         val = val.replace("xesam:", "").replace("mpris:", "")
         # Evaluating literally because of single/double quotes problem "this 'string', for an example"
         data = ast.literal_eval(val)
-        #data = json.loads(val)
+        # data = json.loads(val)
         return data
+
 
 def main():
     signal.signal(signal.SIGINT, signal.SIG_DFL)
@@ -111,6 +114,6 @@ def main():
     spotify.show()
     sys.exit(spotify.app.exec_())
 
+
 if __name__ == '__main__':
     main()
-
