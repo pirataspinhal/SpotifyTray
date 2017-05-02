@@ -27,14 +27,14 @@ __AUR Support will be added later__
 
 Clone the [`PKGBUILD`][pkgbuild] Repository and run `makepkg`
 
-```
+```sh
 $ git clone git@github.com:Kasama/SpotifyTrayPKGBUILD.git
 $ cd SpotifyTrayPKGBUILD
 $ makepkg -s
 ```
 You can then install the generated package with `pacman -U`
 
-```
+```sh
 # pacman -U spotify-tray*.tar.xz
 ```
 
@@ -43,17 +43,27 @@ You can then install the generated package with `pacman -U`
 __Real installation will be implemented soon, for now you can follow below__
 
 No installation is required. You just need to clone the repository or download the zip file locally
-```
+```sh
 $ git clone git@github.com:Kasama/SpotifyTray.git
 $ cd SpotifyTray
 ```
 
 and run the script with python
-```
+```sh
 $ python3 spotify-tray.py
 ```
 
 You can also use the provided `.desktop` file to launch the script. The `.desktop` should be in `/usr/share/applications/` or `~/.local/share/applications` and the python script should be in your `$PATH`
+
+Known Bugs
+----------
+
+- If you close spotify manually with this program running, it will hang useless and you won't be able to close it.
+
+You can kill it with:
+```sh
+kill -9 `ps -aux | grep spotify-tray | head -1 | sed 's/\s\+/ /g' | cut -d' ' -f2`
+```
 
 License
 -------
