@@ -13,10 +13,10 @@ Requirements
 ------------
 
 - A Linux distribuition (as the problem is not present on Windows/MacOS)
-- Python >= 3 (to run the script)
-	- PyQt4 (to manage tray icon and menu)
-- xdotool (to hide/show spotify)
-- playerctl (to control playback)
+- [Python >= 3][python] (to run the script)
+	- [PyQt4][pyqt] (to manage tray icon and menu)
+- [xdotool][xdotool] (to hide/show spotify)
+- [playerctl][playerctl] (to control playback)
 
 Installation
 ------------
@@ -32,10 +32,18 @@ and run the script with python
 python3 main.py
 ```
 
-You can after that, create a (or change spotify's) `.desktop` file to launch the script
+You can also create a (or change spotify's) `.desktop` file to launch the script
 
 License
 -------
 
-This project is distributed under the MIT license, without any guarantees explicit or otherwise.
-The png icon used is the logotype of Spotify Inc. And is not my work in any way.
+This project is distributed under the [MIT license][mit].
+
+The png icon used is the logotype of [Spotify Inc.][spotify] It is not my work in any way and all its rights are reserved.
+
+[python]: https://www.python.org/downloads/release/python-361/
+[pyqt]: https://www.riverbankcomputing.com/software/pyqt/download
+[xdotool]: http://www.semicomplete.com/projects/xdotool
+[playerctl]: https://github.com/acrisci/playerctl
+[mit]: LICENSE.md
+[spotify]: https://www.spotify.com
