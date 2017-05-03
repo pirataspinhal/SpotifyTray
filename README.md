@@ -28,8 +28,8 @@ __AUR Support will be added later__
 Clone the [`PKGBUILD`][pkgbuild] Repository and run `makepkg`
 
 ```sh
-$ git clone git@gist.github.com:1aeea4c39d33ea515a5cf7957053d131.git
-$ cd SpotifyTrayPKGBUILD
+$ git clone https://gist.github.com/1aeea4c39d33ea515a5cf7957053d131.git
+$ cd 1aeea4c39d33ea515a5cf7957053d131
 $ makepkg -s
 ```
 You can then install the generated package with `pacman -U`
