@@ -28,7 +28,7 @@ __AUR Support will be added later__
 Clone the [`PKGBUILD`][pkgbuild] Repository and run `makepkg`
 
 ```sh
-$ git clone git@github.com:Kasama/SpotifyTrayPKGBUILD.git
+$ git clone git@gist.github.com:1aeea4c39d33ea515a5cf7957053d131.git
 $ cd SpotifyTrayPKGBUILD
 $ makepkg -s
 ```
@@ -76,6 +76,6 @@ Spotify is a trademark of [Spotify Inc.][spotify] It is not my work in any way a
 [pyqt]: https://www.riverbankcomputing.com/software/pyqt/download
 [xdotool]: http://www.semicomplete.com/projects/xdotool
 [playerctl]: https://github.com/acrisci/playerctl
-[pkgbuild]: https://github.com/Kasama/SpotifyTrayPKGBUILD
+[pkgbuild]: https://gist.github.com/1aeea4c39d33ea515a5cf7957053d131
 [mit]: LICENSE.md
 [spotify]: https://www.spotify.com
